@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="29" result="Passed" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="390" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-04-20 05:23:33Z" end-time="2020-04-20 05:23:35Z" duration="2.619487">
+  <command-line><![CDATA[NUnit/nunit3-console.exe  SVAR-UnitTests\bin\Debug\SVAR-UnitTests.dll /labels=All]]></command-line>
+  <test-suite type="Assembly" id="0-1034" name="SVAR-UnitTests.dll" fullname="D:\Capstone\SVAR-UnitTests\SVAR-UnitTests\bin\Debug\SVAR-UnitTests.dll" runstate="Runnable" testcasecount="29" result="Passed" start-time="2020-04-20 05:23:33Z" end-time="2020-04-20 05:23:35Z" duration="1.854665" total="29" passed="29" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="390">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="D:\Capstone\SVAR-UnitTests" machine-name="DESKTOP-L9IN46D" user="jason" user-domain="DESKTOP-L9IN46D" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="D:\Capstone\SVAR-UnitTests" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.7.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="RuntimeFramework" value="net-4.0" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="31304" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1035" name="DataCollection" fullname="DataCollection" runstate="Runnable" testcasecount="29" result="Passed" start-time="2020-04-20 05:23:33Z" end-time="2020-04-20 05:23:35Z" duration="1.839747" total="29" passed="29" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="390">
+      <test-suite type="TestFixture" id="0-1000" name="BadFileHeader" fullname="DataCollection.BadFileHeader" classname="DataCollection.BadFileHeader" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-04-20 05:23:33Z" end-time="2020-04-20 05:23:34Z" duration="0.470940" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <test-case id="0-1001" name="BadHeaderFileBadIndex" fullname="DataCollection.BadFileHeader.BadHeaderFileBadIndex" methodname="BadHeaderFileBadIndex" classname="DataCollection.BadFileHeader" runstate="Runnable" seed="1496067418" result="Passed" start-time="2020-04-20 05:23:33Z" end-time="2020-04-20 05:23:34Z" duration="0.459068" asserts="1">
+          <output><![CDATA[Unable to parse header file:System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read3_NullableOfUInt32(Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read9_DataPointDefinition(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read10_DataHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read11_SensorDefinition()
+]]></output>
+        </test-case>
+        <test-case id="0-1002" name="BadHeaderFileBadUnit" fullname="DataCollection.BadFileHeader.BadHeaderFileBadUnit" methodname="BadHeaderFileBadUnit" classname="DataCollection.BadFileHeader" runstate="Runnable" seed="2026759738" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.003813" asserts="1">
+          <output><![CDATA[Unable to parse header file:System.InvalidOperationException: Instance validation error: 'badUnit' is not a valid value for Unit.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read4_Unit(String s)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read5_NullableOfUnit(Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read9_DataPointDefinition(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read10_DataHeader(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderDataHeader.Read11_SensorDefinition()
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="0-1029" name="ReadGoodHeader" fullname="DataCollection.ReadGoodHeader" classname="DataCollection.ReadGoodHeader" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.033604" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="47">
+        <test-case id="0-1030" name="CouldOpenFile" fullname="DataCollection.ReadGoodHeader.CouldOpenFile" methodname="CouldOpenFile" classname="DataCollection.ReadGoodHeader" runstate="Runnable" seed="1242943255" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.000863" asserts="1">
+          <output><![CDATA[Correctly Loaded HeaderFile]]></output>
+        </test-case>
+        <test-case id="0-1033" name="ReadDataPoints" fullname="DataCollection.ReadGoodHeader.ReadDataPoints" methodname="ReadDataPoints" classname="DataCollection.ReadGoodHeader" runstate="Runnable" seed="1494103606" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.019041" asserts="42" />
+        <test-case id="0-1031" name="ReadDeltaTimeCorrectly" fullname="DataCollection.ReadGoodHeader.ReadDeltaTimeCorrectly" methodname="ReadDeltaTimeCorrectly" classname="DataCollection.ReadGoodHeader" runstate="Runnable" seed="1776200527" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.000283" asserts="2">
+          <output><![CDATA[Read Delta time as 0.2]]></output>
+        </test-case>
+        <test-case id="0-1032" name="ReadSourceCorrectly" fullname="DataCollection.ReadGoodHeader.ReadSourceCorrectly" methodname="ReadSourceCorrectly" classname="DataCollection.ReadGoodHeader" runstate="Runnable" seed="690773139" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.000236" asserts="2">
+          <output><![CDATA[Read source type as NETWORK]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="0-1003" name="TCPConnectionSinglePoint" fullname="DataCollection.TCPConnectionSinglePoint" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" testcasecount="23" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:35Z" duration="1.329428" total="23" passed="23" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="341">
+        <test-suite type="ParameterizedMethod" id="0-1014" name="BasicSend" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" testcasecount="10" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.450378" total="10" passed="10" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="60">
+          <properties>
+            <property name="_JOINTYPE" value="Sequential" />
+          </properties>
+          <test-case id="0-1004" name="BasicSend(7.453844f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(7.453844f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="688686794" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.086104" asserts="6" />
+          <test-case id="0-1005" name="BasicSend(3.687869f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(3.687869f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="100353864" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.049708" asserts="6" />
+          <test-case id="0-1006" name="BasicSend(1.668321f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(1.668321f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="392981039" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.037085" asserts="6" />
+          <test-case id="0-1007" name="BasicSend(0.9569274f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(0.9569274f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="892608156" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.046982" asserts="6" />
+          <test-case id="0-1008" name="BasicSend(6.882782f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(6.882782f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="213266356" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.037832" asserts="6" />
+          <test-case id="0-1009" name="BasicSend(1.606147f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(1.606147f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1793372632" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.040000" asserts="6" />
+          <test-case id="0-1010" name="BasicSend(7.122667f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(7.122667f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1213857198" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.036976" asserts="6" />
+          <test-case id="0-1011" name="BasicSend(0.8257238f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(0.8257238f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="448345441" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.036935" asserts="6" />
+          <test-case id="0-1012" name="BasicSend(3.725948f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(3.725948f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1842428900" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.037926" asserts="6" />
+          <test-case id="0-1013" name="BasicSend(3.392869f)" fullname="DataCollection.TCPConnectionSinglePoint.BasicSend(3.392869f)" methodname="BasicSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1428225733" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.038954" asserts="6" />
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="0-1026" name="ChangeMinAndMax" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" testcasecount="10" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:35Z" duration="0.441949" total="10" passed="10" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="60">
+          <properties>
+            <property name="_JOINTYPE" value="Sequential" />
+          </properties>
+          <test-case id="0-1016" name="ChangeMinAndMax(0.5975668f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(0.5975668f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1379017288" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.048882" asserts="6" />
+          <test-case id="0-1017" name="ChangeMinAndMax(4.594575f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(4.594575f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1143873702" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.036258" asserts="6" />
+          <test-case id="0-1018" name="ChangeMinAndMax(0.9387587f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(0.9387587f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="54121473" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.047684" asserts="6" />
+          <test-case id="0-1019" name="ChangeMinAndMax(2.475369f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(2.475369f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="721564631" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:34Z" duration="0.037054" asserts="6" />
+          <test-case id="0-1020" name="ChangeMinAndMax(3.277832f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(3.277832f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1268320393" result="Passed" start-time="2020-04-20 05:23:34Z" end-time="2020-04-20 05:23:35Z" duration="0.048886" asserts="6" />
+          <test-case id="0-1021" name="ChangeMinAndMax(3.114268f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(3.114268f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="473271910" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.037019" asserts="6" />
+          <test-case id="0-1022" name="ChangeMinAndMax(4.385812f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(4.385812f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="2102407620" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.038053" asserts="6" />
+          <test-case id="0-1023" name="ChangeMinAndMax(5.496991f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(5.496991f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1872131853" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.047857" asserts="6" />
+          <test-case id="0-1024" name="ChangeMinAndMax(7.020838f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(7.020838f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="460840427" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.051716" asserts="6" />
+          <test-case id="0-1025" name="ChangeMinAndMax(0.01211078f)" fullname="DataCollection.TCPConnectionSinglePoint.ChangeMinAndMax(0.01211078f)" methodname="ChangeMinAndMax" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="446650976" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.047987" asserts="6" />
+        </test-suite>
+        <test-case id="0-1015" name="DiffrentDelimeter" fullname="DataCollection.TCPConnectionSinglePoint.DiffrentDelimeter" methodname="DiffrentDelimeter" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="748682865" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.039978" asserts="9">
+          <properties>
+            <property name="_JOINTYPE" value="Sequential" />
+          </properties>
+        </test-case>
+        <test-case id="0-1027" name="MultiSend" fullname="DataCollection.TCPConnectionSinglePoint.MultiSend" methodname="MultiSend" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="1001030699" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.064032" asserts="203">
+          <properties>
+            <property name="_JOINTYPE" value="Sequential" />
+          </properties>
+        </test-case>
+        <test-case id="0-1028" name="MutipleConnections" fullname="DataCollection.TCPConnectionSinglePoint.MutipleConnections" methodname="MutipleConnections" classname="DataCollection.TCPConnectionSinglePoint" runstate="Runnable" seed="70272278" result="Passed" start-time="2020-04-20 05:23:35Z" end-time="2020-04-20 05:23:35Z" duration="0.332891" asserts="9">
+          <properties>
+            <property name="_JOINTYPE" value="Sequential" />
+          </properties>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

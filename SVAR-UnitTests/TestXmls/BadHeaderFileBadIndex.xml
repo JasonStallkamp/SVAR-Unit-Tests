@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SensorDefinition>
+  <DeltaTime>.2</DeltaTime>
+  <SourceType>NETWORK</SourceType>
+  <SourceLocation></SourceLocation>
+  <DataPoints>
+    <DataPointDefinition>
+      <Name>testSensor1</Name>
+      <X>1</X>
+      <Y>2</Y>
+      <Z>3</Z>
+      <Index>-1</Index>
+      <Units>Inch</Units>
+      <Min isFixed="true">0</Min>
+      <Max isFixed="false">10</Max>
+    </DataPointDefinition>
+  </DataPoints>
+</SensorDefinition>
